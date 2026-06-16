@@ -27,7 +27,7 @@ def note_to_frequency(note):
         "B4": 494,
         "C5": 523,
     }
-    return frequencies[note]
+    return frequencies.get(note, 0)
 
 
 # 문제 3.
@@ -57,7 +57,7 @@ def direction_to_twist(direction):
     elif direction == "stop":
         return (0.0, 0.0)
     else:
-        raise ValueError()
+        return (0.0, 0.0)
 
 
 # 문제 5.
